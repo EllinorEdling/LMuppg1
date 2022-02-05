@@ -22,6 +22,8 @@
     padding-right: 10px;
     padding-bottom: 5px;
     border-bottom: 2px solid transparent;
+    display: block;
+   padding: 12px, 16px;
 }
 
 .header a:hover {
@@ -77,10 +79,24 @@ hr.avgrans {
     margin-left: 40px;
 }
 
+@media screen and (max-width: 600px) {
+    .h1{
+        margin-left: 10px;
+        font-size: 36px;
+    }
+}
+
 .h2p1 {
     text-align: left;
     font-size: 36px;
     margin-left: 40px;
+}
+
+@media screen and (max-width: 600px){
+    .h2p1{
+        margin-left: 10px;
+        font-size: 28px;
+    }
 }
 
 .loremp1 {
@@ -88,10 +104,25 @@ hr.avgrans {
     margin-left: 40px;
 }
 
+@media screen and (max-width: 600px){
+    .loremp1{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+}
+
 .picture1 {
     position: absolute;
     top: 150px;
     left: 800px;
+    
+   
+}
+@media screen and (max-width: 600px){
+    .picture1{
+        display: none;
+        
+    }
 }
 
 .lonetext {
@@ -100,8 +131,6 @@ hr.avgrans {
     text-align: left;
 }
 
-
-
 .myForm {
     background-color: white;
     position: absolute;
@@ -109,7 +138,7 @@ hr.avgrans {
     right: 380px;
     padding: 20px;
     height: 390px;
-    width: 250px;
+    width: 300px;
     border-radius: 10px;
     box-shadow: 10px 10px 5px rgb(165, 162, 162);
 }
@@ -155,6 +184,7 @@ legend {
     border: none;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(165, 162, 162);
+    padding: 12px, 16px;
 }
 
 .buttonForm:hover {
@@ -186,14 +216,18 @@ legend {
     width: 100px;
     height: 25px;
     box-shadow: 5px 5px 5px rgb(165, 162, 162);
+    padding: 12px, 16px;
 }
+
 
 
 .h2p2 {
     text-align: left;
     font-size: 36px;
     margin-left: 40px;
+    padding-bottom: 40px;
 }
+
 
 .loremp2 {
     text-align: left;
@@ -201,7 +235,7 @@ legend {
 }
 
 .container {
-    position: absolute;
+    position: relative;
 }
 
 .citat {
@@ -218,15 +252,19 @@ legend {
 }
 
 .imgStaff {
-    width: 80%;
-    height: auto;
+    width: 100%
+    
+    
 }
 
 .nameImg {
     position: absolute;
     bottom: 0px;
     right: 40px;
+    padding-bottom: 5px;
 }
+
+
 
 .h2p3 {
     text-align: left;
@@ -234,31 +272,37 @@ legend {
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+   
+     
 }
 
 .column1 {
-    flex: 1;
-    margin-top: 70px;
-    margin-bottom: 20px;
-    padding-left: 0;
-    max-width: 500px;
-    min-width: 300px;
+    flex: 40%;
+   padding: 20px;
 
 }
 
 .column2 {
-    flex: 1;
-    margin-top: 70px;
-    margin-bottom: 20px;
-    margin-left: 50px;
-    margin-right: 200px;
-    padding-left: 0;
-    max-width: 1000px;
-    min-width: 400px;
+    flex: 60%;
+   padding: 20px;
 }
+.column5{
+    flex: 100%;
+    
+}
+
+   
+
+@media  screen and (max-width: 600px) {
+    .column1, .column2, .column5 {
+        
+        flex: 100%;
+    }
+    
+}
+
 
 .column3 {
     flex: 1;
@@ -267,6 +311,11 @@ legend {
     padding-left: 0;
     max-width: 600px;
 
+}
+@media  screen and (max-width: 600px){
+    .column3{
+        display: none;
+    }
 }
 
 .column4 {
@@ -278,4 +327,29 @@ legend {
     padding-left: 0;
     max-width: 1000px;
     min-width: 400px;
+}
+@media screen and (max-width: 600px) {
+    .citat {
+        font-size: 22px;
+        margin-top: 0px;
+    }
+    .nameImg {
+        font-size: 12px;
+    }
+    
+    .h2p2{
+        font-size: 28px;
+    }
+    .loremp2{
+        font-size: 18px;
+    }
+    .imgp2{
+        max-width: 600px;
+    }
+}
+@media  screen and (max-width: 600px){
+     .h2p3{
+        font-size: 28px;}
+.textp3{
+    font-size: 18px;}
 }

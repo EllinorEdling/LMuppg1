@@ -1,7 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
+<!--WCAG 3.1.1-->
 
 <head>
+    <!--webbriktlinje1: WCAG 2.4.1 Erbjud möjlighet att hoppa över innehåll. 
+        Detta har jag tillämpat genom att tillägga aria-labels så
+         att de med skärmläsaare lättare kan navigera sig på sidan. Har även lämnat tomma 
+        alt-texter då dessa är endast dekorativa och inte har nån funktion. -->
+    <!--webbriktlinje2: WCAG 1.4.3 Använd tillräcklig kontrast mellan
+    text och bakgrund. Detta har jag tillämpat genom att kolla alla kontraster
+    svart text-ljusblå bakgrund = 19.66:1 , vit text-mörkblå bakgrund = 17.13:1-->
+    <!--webbriktlinje 3 = WCAG 3.1.1 Ange sidans språk i koden-->
+    <!-- Har även för tillgänglighetens skull adderat padding till knappar och länkar som 
+    underlättar med en större klickyta-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +28,13 @@
 
 <body>
     <header>
+        <!--2.4.1 aria-label-->
         <!--header startar-->
         <div class="header">
             <a href="index.html" class=imglogo><img src="img/logo.png" alt="logo.lonemaklarna" height="100px"></a>
             <!--länk till loggo-->
             <nav class="myNav">
+                <!--2.4.1 aria-label-->
                 <!--3 länksidor-->
                 <a class="active" href="index.html">Hem</a>
                 <a href="about.html">Om oss</a>
@@ -32,63 +45,73 @@
     <!--header slutar-->
     <hr class="avgrans">
     <!--för mobil-->
-    <section class="lonetext">
-        <h1 class="h1">Lönemäklarna</h1>
-        <!--Rubrik-->
-        <h2 class="h2p1">Hjälpen för att <br>kunna utföra dina <br>egentliga uppgifter</h2>
-        <!--Underrubrik-->
-        <br>
-        <p class="loremp1">Lorem ipsum dolor sit amet, consectetur <br>
-            <!--innehåll-->
-            adipiscing elit,sed do eiusmod tempor <br>
-            incididunt ut labore et dolore magna aliqua. <br>
-            Ut enim ad minim veniam, quis nostrud <br>
-            exercitation ullamco laboris nisi ut aliquip <br>
-            ex ea commodo consequat. Duis aute irure dolor <br>
-            in reprehenderit in voluptate velitesse <br>
-            cillum dolore eu fugiat nulla pariatur. <br>
-            Excepteu sint occaecat cupidatat non proident,<br>
-            sunt in culpa qui officia deserunt mollit <br>
-            anim id est laborum.</p>
-        <br> <br>
-        <a class="linkButton" href="contact.html">Läs mer här</a>
-        <!--länk stylad som knapp-->
-        <br>
-        <div class="picture1">
-            <img src="img/desk1.png" alt="img of a desk with a computer" />
-            <!--länk till bild sid 1-->
-        </div>
+    <main>
+        <!--2.4.1 aria-label-->
+        <section class="lonetext">
+            <h1 class="h1">Lönemäklarna</h1>
+            <!--Rubrik-->
+            <h2 class="h2p1">Hjälpen för att <br>kunna utföra dina <br>egentliga uppgifter</h2>
+            <!--Underrubrik-->
+            <br>
+            <p class="loremp1">Lorem ipsum dolor sit amet, consectetur <br>
+                <!--innehåll-->
+                adipiscing elit,sed do eiusmod tempor <br>
+                incididunt ut labore et dolore magna aliqua. <br>
+                Ut enim ad minim veniam, quis nostrud <br>
+                exercitation ullamco laboris nisi ut aliquip <br>
+                ex ea commodo consequat. Duis aute irure dolor <br>
+                in reprehenderit in voluptate velitesse <br>
+                cillum dolore eu fugiat nulla pariatur. <br>
+                Excepteu sint occaecat cupidatat non proident,<br>
+                sunt in culpa qui officia deserunt mollit <br>
+                anim id est laborum.</p>
+            <br> <br>
+            <a class="linkButton" href="contact.html" id="linktext">Mer om oss</a>
+            <!--länk stylad som knapp-->
+            <br>
+            <div class="picture1">
+                <img src="img/desk1.png" alt="" />
+                <!--länk till bild sid 1-->
+            </div>
 
 
 
-        <form class="myForm">
-            <!--start formulär-->
-            <legend>Få en prisuppskattning</legend> <br> <br>
-            <label for="fname">Förnamn</label><br>
-            <input type="text" id="fname" name="fname" placeholder="Skriv ditt förnamn här" /> <br>
-            <label for="lname">Efternamn</label><br>
-            <input type="text" id="lname" name="lname" placeholder="Skriv ditt efternamn här" /><br>
-            <label for="email">E-post adress</label><br>
-            <input type="text" id="email" name="email" placeholder="Skriv din e-post adress här"><br>
-            <label for="quantity">Antal löner per månad</label><br>
-            <input type="number" id="quantity" name="quantity" placeholder="1-500" min="1" max="500"><br>
-            <label for="quantity">Antal kvitton per månad</label><br>
-            <input type="number" id="quantity" name="quantity" placeholder="1-500" min="1" max="500">
-            <br><br><br>
-            <button class="buttonForm" type="button">Skicka in och få prisuppskattning</button>
-            <!--knapp för att sända formulär-->
+            <form class="myForm" aria-label="förfråganformulär">
+                <!--start formulär-->
+                <!--2.4.1 aria-label-->
+                <legend>Få en prisuppskattning</legend> <br> <br>
+                <label for="fname">Förnamn</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Skriv ditt förnamn här" /> <br>
+                <label for="lname">Efternamn</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Skriv ditt efternamn här" /><br>
+                <label for="email">E-post adress</label><br>
+                <input type="text" id="email" name="email" placeholder="Skriv din e-post här"><br>
+                <label for="quantity">Antal löner per månad</label><br>
+                <input type="number" id="quantity" name="quantity" placeholder="1-500" min="1" max="500"><br>
+                <label for="quantity">Antal kvitton per månad</label><br>
+                <input type="number" id="quantity" name="quantity" placeholder="1-500" min="1" max="500">
+                <br><br><br>
+                <button class="buttonForm" type="button" onclick="myFunction()">Skicka in och få
+                    prisuppskattning</button>
+                <!--knapp för att sända formulär-->
+                <!--onklick med funktion i JS-->
 
-        </form>
-    </section>
+            </form>
+        </section>
+    </main>
     <!--formulär slut-->
 
 
     <footer>
+        <!--2.4.1 aria-label-->
         <!--footer startar-->
         <p class="myFooter">info@lonemaklarna.se,
             tel:070-111 111 111</p>
     </footer>
     <!--footer slut-->
+
+    <script src="javascript.js"></script>
+    <!--länk till javascript-->
 </body>
 
 </html>

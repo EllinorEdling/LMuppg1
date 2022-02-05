@@ -1,7 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
+<!--WCAG 3.1.1-->
 
 <head>
+    <!--webbriktlinje1: WCAG 2.4.1 Erbjud möjlighet att hoppa över innehåll. 
+        Detta har jag tillämpat genom att tillägga aria-labels så
+         att de med skärmläsaare lättare kan navigera sig på sidan. Har även lämnat tomma 
+        alt-texter då dessa är endast dekorativa och inte har nån funktion. -->
+    <!--webbriktlinje2: WCAG 1.4.3 Använd tillräcklig kontrast mellan
+    text och bakgrund. Detta har jag tillämpat genom att kolla alla kontraster
+    svart text-ljusblå bakgrund = 19.66:1 , vit text-mörkblå bakgrund = 17.13:1-->
+    <!--webbriktlinje 3 = WCAG 3.1.1 Ange sidans språk i koden-->
+    <!-- Har även för tillgänglighetens skull adderat padding till knappar och länkar som 
+    underlättar med en större klickyta-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +28,13 @@
 
 <body>
     <header>
+        <!--2.4.1 aria-label-->
         <!--header startar-->
         <div class="header">
             <a href="index.html" class=imglogo><img src="img/logo.png" alt="logo.lonemaklarna" height="100px"></a>
             <!--länk till loggo-->
             <nav class="myNav">
+                <!--2.4.1 aria-label-->
                 <a href="index.html">Hem</a>
                 <!--3 länksidor-->
                 <a href="about.html">Om oss</a>
@@ -32,48 +45,52 @@
     <!--header slutar-->
     <hr class="avgrans">
     <!--för mobil-->
-    <section>
-        <div class="row">
-            <!--flexbox start-->
-            <div class="column3">
-                <!--vänster del av sidan-->
-                <img src="img/desk2.png" alt="desk with pen and papers">
+    <main>
+        <!--2.4.1 aria-label-->
+        <section>
+            <div class="row">
+                <!--flexbox start-->
+                <div class="column3">
+                    <!--vänster del av sidan-->
+                    <img class="img3" src="img/desk2.png" alt="">
 
+                </div>
+                <div class="column4">
+                    <!--höger del av sidan-->
+                    <h2 class="h2p3">Vi erbjuder en helhetslösning som innehåller</h2>
+                    <ul class="textp3">
+                        <li>Rådgivning i lönespecifika frågor</li>
+                        <li>Lönespecifikationer till alla medarbetare</li>
+                        <li>Lönelösningar till ett förmånligt pris</li>
+
+                    </ul>
+                    <h2 class="h2p3">Vad kan vi göra för dig?</h2>
+                    <p class="textp3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie lectus
+                        sollicitudin ullamcorper elementum, elementum. Enim ut dolor ut
+                        vestibulum porttitor. Hac neque venenatis integer feugiat. Sed augue
+                        dignissim quis adipiscing egestas vitae pellentesque vitae elit. Nibh
+                        sed amet, congue morbi etiam ut facilisis.
+
+                    </p>
+                    <h2 class="h2p3">Kontakt</h2>
+                    <p class="textp3">
+                        Thomas Francke VD <br>
+                        Storgatan 56 <br>
+                        110 18 Stockholm <br>
+                        thomas@lonemaklarna.se <Br>
+                        070-111 111 111
+
+                    </p>
+
+                </div>
             </div>
-            <div class="column4">
-                <!--höger del av sidan-->
-                <h2 class="h2p3">Vi erbjuder en helhetslösning som innehåller</h2>
-                <ul>
-                    <li>Rådgivning i lönespecifika frågor</li>
-                    <li>Lönespecifikationer till alla medarbetare</li>
-                    <li>Lönelösningar till ett förmånligt pris</li>
+            <!--flexbox slutar-->
 
-                </ul>
-                <h2 class="h2p3">Vad kan vi göra för dig?</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie lectus
-                    sollicitudin ullamcorper elementum, elementum. Enim ut dolor ut
-                    vestibulum porttitor. Hac neque venenatis integer feugiat. Sed augue
-                    dignissim quis adipiscing egestas vitae pellentesque vitae elit. Nibh
-                    sed amet, congue morbi etiam ut facilisis.
-
-                </p>
-                <h2 class="h2p3">Kontakt</h2>
-                <p>
-                    Thomas Francke VD <br>
-                    Storgatan 56 <br>
-                    110 18 Stockholm <br>
-                    thomas@lonemaklarna.se <Br>
-                    070-111 111 111
-
-                </p>
-
-            </div>
-        </div>
-        <!--flexbox slutar-->
-
-    </section>
+        </section>
+    </main>
     <footer>
+        <!--2.4.1 aria-label-->
         <!--footer startar-->
         <p class="myFooter">info@lonemaklarna.se,
             tel:070-111 111 111</p>
